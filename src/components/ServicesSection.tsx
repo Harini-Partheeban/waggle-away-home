@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Home, Heart, Clock, Camera, Gamepad2, Stethoscope } from "lucide-react";
+import diversePets from "@/assets/diverse-pets.jpg";
+import exoticPets from "@/assets/exotic-pets.jpg";
+import aquariumCare from "@/assets/aquarium-care.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -58,6 +61,48 @@ const ServicesSection = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive care tailored to your pet's unique needs and personality
           </p>
+        </div>
+        
+        {/* Pet Images Gallery */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-6xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+            <img 
+              src={diversePets} 
+              alt="Diverse pets including birds, small mammals, and traditional pets" 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-pet-orange/60 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="font-bold text-lg">All Pet Types</h3>
+              <p className="text-sm opacity-90">Dogs, cats, birds & more</p>
+            </div>
+          </div>
+          
+          <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+            <img 
+              src={exoticPets} 
+              alt="Exotic pets care including birds and small mammals" 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-pet-blue/60 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="font-bold text-lg">Exotic Care</h3>
+              <p className="text-sm opacity-90">Specialized exotic pet services</p>
+            </div>
+          </div>
+          
+          <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+            <img 
+              src={aquariumCare} 
+              alt="Aquarium and fish care services" 
+              className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-pet-green/60 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="font-bold text-lg">Aquatic Friends</h3>
+              <p className="text-sm opacity-90">Fish & aquarium maintenance</p>
+            </div>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
